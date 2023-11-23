@@ -1,0 +1,136 @@
+.my-card {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid;
+}
+
+.my-flag {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background-color: #ffc702;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 5px;
+  font-size: 16px;
+  z-index: 1;
+  transition: opacity 0.5s;
+}
+.my-card:hover .my-flag {
+  opacity: 0;
+}
+.my-flag::before,
+.my-flag::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  width: 0;
+  height: 15px;
+  border-left: 10px solid #ffc702;
+}
+
+.my-flag::after {
+  top: 0;
+  border-top: 5px solid #ffc702;
+  border-bottom: 12px solid transparent;
+}
+
+.my-flag::before {
+  bottom: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 5px solid #ffc702;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.edit-button,
+.delete-button {
+  width: 100%;
+  margin-bottom: 10px;
+  border-color: #242834;
+  background-color: #242834;
+  transition: background-color 0.5s;
+}
+
+.edit-button:hover {
+  border-color: #207574;
+  background-color: #207574;
+}
+
+.delete-button:hover {
+  border-color: #207574;
+  background-color: #207574;
+}
+
+.my-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+}
+
+.my-subtitle {
+  font-size: 16px;
+  color: #000000;
+}
+
+.my-text {
+  padding-top: 10px;
+  font-size: 15px;
+  color: #292929;
+}
+
+.my-price {
+  font-size: 16px;
+  color: #292929;
+}
+
+.my-description {
+  font-size: 10px;
+  color: #303030;
+}
+
+@media (max-height: 670px) {
+  .my-card .card-img-top {
+    max-height: 150px;
+  }
+  .my-title {
+    font-size: 22px;
+  }
+  .my-subtitle {
+    font-size: 14px;
+  }
+  .my-text {
+    font-size: 12px;
+  }
+  .my-price {
+    font-size: 14px;
+  }
+  .my-description {
+    font-size: 8px;
+  }
+}
+
+@media (max-height: 520px) {
+  .my-card .card-img-top {
+    max-height: 100px;
+  }
+  .my-title {
+    font-size: 18px;
+  }
+  .my-subtitle {
+    font-size: 10px;
+  }
+  .my-text {
+    font-size: 8px;
+  }
+  .my-price {
+    font-size: 10px;
+  }
+  .my-description {
+    font-size: 6px;
+  }
+}
